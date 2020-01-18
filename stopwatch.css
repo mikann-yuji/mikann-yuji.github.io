@@ -1,0 +1,50 @@
+body {
+  width: 600px;
+  margin: 300px auto;
+  padding: 20px 20px 20px 20px;
+}
+
+#countArea {
+  display: flex;
+  justify-content: center;
+}
+
+#menuArea {
+  display: flex;
+  justify-content: center;
+}
+
+#buttonArea {
+  display: flex;
+  justify-content: center;
+}
+
+#countArea h1 {
+  margin: 5px;
+  font-size: 100px;
+}
+
+#menuArea select {
+  margin: 5px;
+  height: 30px;
+  width: 100px;
+}
+
+#buttonArea button {
+  margin: 5px;
+  height: 30px;
+  width: 100px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #555;
+}
+#buttonArea button:hover {
+  background-color: rgb(233, 233, 233);
+}
+#buttonArea button:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  border-bottom: none;
+}
+#buttonArea button:focus {
+  outline: 0;
+}
