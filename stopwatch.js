@@ -16,6 +16,9 @@ let seconds;
 let mode;
 let stopwatch;
 let timer;
+let audio;
+
+audio = new Audio('./spring-mountain1.mp3');
 
 stopwatch = 0;
 timer = 1;
@@ -71,6 +74,8 @@ startButton.onclick = () => {
       countId = setInterval(startTimer, 1000);
       stopButton.onclick = () => {
         startButton.disabled = false;
+        audio.pause();
+        audio.currentTime = 0;
         clearInterval(countId);
       }
       break;
@@ -84,6 +89,8 @@ resetButton.onclick = () => {
   minCount.innerText = '00';
   secCount.innerText = '00';
   mode = stopwatch;
+  audio.pause();
+  audio.currentTime = 0;
   clearInterval(countId);
 }
 
@@ -108,6 +115,7 @@ function startTimer() {
     secCount.innerText = '00';
     hours = minutes = seconds = 0;
     startButton.disabled = false;
+    audio.play();
     mode = stopwatch;
     return;
   }
